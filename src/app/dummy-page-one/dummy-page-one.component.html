@@ -1,0 +1,33 @@
+<p>
+  dummy-page-one works!
+</p>
+<button (click)=showList()>Click For List!!!!</button>
+<div>
+  <div class="container">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-inverse">
+            <tr>
+                <th class="text-center">Employee ID</th>
+                <th class="text-center">Employee Name</th>
+                <th class="text-center">Employee Salary</th>
+                <th class="text-center">Employee Age</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let emp of _empArray">
+                <td class="text-center" style="width: 15px;">{{emp.id}}</td>
+                <td class="text-center" style="width: 15px;">{{emp.employee_name}}</td>
+                <td class="text-center" style="width: 200px;">{{emp.employee_salary}}</td>
+                <td class="text-center" style="width: 200px;">{{emp.employee_age}}</td>               
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 alert alert-warning">
+  {{error}}
+</div>
+</div>
+</div>
